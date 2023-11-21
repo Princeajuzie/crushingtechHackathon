@@ -1,0 +1,238 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+:root {
+  --color: #323232;
+  ---bgcolor: #1a1a1a;
+  --search: #303030;
+  --searchColor: #b5b5b5;
+  ---usersidecolor: #303030;
+  ---textwhite: #ffff;
+}
+
+/* custom flex-container */
+
+.flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+body {
+  background: #f1f1f1;
+}
+nav {
+  height: 56px;
+  width: 100%;
+  background-color: var(---bgcolor);
+  padding: 12px 16px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+nav .search {
+  display: flex;
+  align-items: center;
+  background-color: var(--search);
+  height: 32px;
+  width: 480px;
+  padding: 8px;
+  gap: 6px;
+  border: 1px solid #616161;
+  border-radius: 5px;
+  color: var(--searchColor);
+  outline: none;
+  top: 14px;
+  left: 480px;
+}
+nav .search input[type="search"] {
+  background-color: var(--search);
+  border: none;
+  outline: none !important;
+  color: var(--searchColor);
+  width: 100%;
+}
+nav .search input[type="search"]::placeholder {
+  width: 44px;
+  height: 18px;
+  color: var(--searchColor);
+  font-family: inter;
+  font-size: 13px;
+  font-weight: 500;
+}
+nav .search .icon svg {
+  width: 15px;
+  height: 15px;
+}
+/* end of search bar styles */
+
+.userside {
+  width: 182px !important;
+  height: 32px;
+  top: 14px;
+  left: 1241.72px;
+  gap: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.userside .notification {
+  width: 40px;
+  height: 32px;
+  padding: 6px;
+  border-radius: 8px;
+  gap: 8px;
+  background: var(---usersidecolor);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.userside .profile {
+  width: 130px;
+  height: 32px;
+  padding: 2px, 2px, 2px, 7px;
+  border-radius: 8px;
+  gap: 8px;
+  background: var(---usersidecolor);
+  cursor: pointer;
+  justify-content: center;
+}
+.userside .profile p {
+  line-height: 15.6px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(---textwhite);
+}
+.userside .profile .shortname {
+  width: 28px;
+  height: 28px;
+  padding: 9px, 5px, 9px, 5px;
+  border-radius: 6px;
+  background-color: #36fba1;
+  justify-content: center !important;
+  text-align: center;
+}
+.userside .profile .shortname span {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+/* end of user aside in navbar && end on navbar*/
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  flex-direction: column;
+  gap: 16px;
+}
+
+main section:nth-child(1) {
+  width: 800px;
+  height: 56px;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: var(---bgcolor);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main section:nth-child(1) .plan {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 139px;
+  height: 32px;
+  gap: 8px;
+}
+main section:nth-child(1) span {
+  color: var(---textwhite);
+}
+main section:nth-child(1) button {
+  width: 99px;
+  height: 28px;
+  padding: 6px, 12px, 6px, 12px;
+  border-radius: 6px;
+  border: 1px;
+  gap: 8px;
+  background-color: var(---textwhite);
+}
+main section:nth-child(1) .plan svg {
+  width: 32px;
+  height: 32px;
+  padding: 6px;
+  border-radius: 6px;
+  gap: 8px;
+}
+main section:nth-child(2) {
+  width: 800px;
+  height: 431px;
+  padding: 8px;
+  border-radius: 18px;
+  border: 1px;
+  gap: 16px;
+  background-color: var(---textwhite);
+  border: 1px solid #dbdbdb;
+  box-shadow: 0px 1px 0px 0px #0000000d;
+}
+main section:nth-child(2) .Acoord {
+  width: 784px;
+  height: 90px;
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+main section:nth-child(2) .Acoord .reverse {
+  cursor: pointer;
+}
+main section:nth-child(2) .Acoord .guide {
+  width: 376px;
+  height: 74px;
+  display: flex;
+
+  flex-direction: column;
+  gap: 16px;
+}
+main section:nth-child(2) .Acoord .guide h2 {
+  font-size: 14px !important;
+  font-weight: 600;
+}
+main section:nth-child(2) .Acoord .guide span {
+  font-size: 13px;
+  font-weight: 400;
+}
+main section:nth-child(2) .Acoord .guide p {
+  font-size: 12px;
+  font-weight: 400;
+}
+main section:nth-child(2) .Acoord .guide .progresscontent {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+main section:nth-child(2) .Acoord .guide .progresscontent .progresscontainer {
+  width: 72px;
+  height: 4px;
+  padding: 0px, 54px, 0px, 0px;
+  border-radius: 28px;
+  background-color: #e3e3e3;
+}
+main
+  section:nth-child(2)
+  .Acoord
+  .guide
+  .progresscontent
+  .progresscontainer
+  .progress {
+  width: 60%;
+  height: 4px;
+  border-radius: 28px;
+  background-color: var(---bgcolor);
+  transition: width 0.3s ease;
+}
