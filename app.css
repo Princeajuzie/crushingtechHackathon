@@ -131,24 +131,24 @@ main {
   margin-top: 30px;
   flex-direction: column;
   gap: 16px;
+  padding-inline: 20px;
 }
 
 main section:nth-child(1) {
-  width: 800px;
-  height: 56px;
+  width: 66%;
+  height: auto;
   padding: 12px;
   border-radius: 8px;
   background-color: var(---bgcolor);
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 main section:nth-child(1) .plan {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 139px;
-  height: 32px;
   gap: 8px;
 }
 main section:nth-child(1) span {
@@ -174,9 +174,8 @@ main section:nth-child(1) .plan svg {
 
 /* end of plan section */
 
-
 main section:nth-child(2) {
-  width: 800px;
+  width: 66%;
   height: 431px;
   padding: 8px;
   border-radius: 18px;
@@ -190,18 +189,18 @@ main section:nth-child(2) {
   box-shadow: 0px 1px 0px 0px #0000000d;
 }
 main section:nth-child(2) .Acoord {
-  width: 784px;
+  width: 100%;
   height: 90px;
   padding: 8px;
   display: flex;
   align-items: start;
   justify-content: space-between;
 }
-main section:nth-child(2) .Acoord .reverse svg{
+main section:nth-child(2) .Acoord .reverse svg {
   cursor: pointer;
 }
 main section:nth-child(2) .Acoord .guide {
-  width: 376px;
+  width: 100%;
   height: 74px;
   display: flex;
   margin-top: 10px;
@@ -245,68 +244,107 @@ main
   border-radius: 28px;
   background-color: var(---bgcolor);
   transition: width 0.3s ease;
-
 }
 main section:nth-child(2) .AllAcord {
-  width: 784px;
+  width: 100%;
   height: auto !important;
   padding-top: 20px;
   display: flex;
   align-items: center;
-flex-direction: column;
+  flex-direction: column;
   gap: 20px;
 }
 main section:nth-child(2) .AllAcord .Accordchild1 {
-  width: 768px;
+  width: 100%;
   height: 24px;
   display: flex;
   align-items: center;
   text-align: center;
   gap: 10px;
-
 }
 main section:nth-child(2) .AllAcord .Accordchild1 span {
   font-weight: 500;
   font-size: 13px;
-
 }
-main section:nth-child(2) .AllAcord .Accordchild1 .vericon svg{
-    margin-top: 5px;
-    width: 24px;
-    height:  24px;
+main section:nth-child(2) .AllAcord .Accordchild1 .vericon svg {
+
+  width: 24px;
+  height: 24px;
 }
 /* end of .Accordchild1 */
 
-main section:nth-child(2) .AllAcord .Accordchild2{
-    width: 784px;
-    height: 141px;
-    padding: 8px, 8px, 12px, 8px;
-    border-radius: 10px;
-    gap: 96px;
-    background-color: #F3F3F3;
-    
+main section:nth-child(2) .AllAcord .Accordchild2 {
+  width: 100%;
+  height: fit-content;
+  border-radius: 10px;
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f3f3f3;
 }
 main section:nth-child(2) .AllAcord .Accordchild2 span {
-    font-weight: 600;
-    font-size: 13px;
-  
-  }
-  main section:nth-child(2) .AllAcord .Accordchild2 .sec1product {
-    width:  515.86px;
-    height:  121px;
-    gap: 8px
-    
+  font-weight: 600;
+  font-size: 13px;
 }
-main section:nth-child(2) .AllAcord .Accordchild2 .sec1product .subicon  .vericon svg{
-    margin-top: 5px;
-    width: 24px;
-    height:  24px;
+main section:nth-child(2) .AllAcord .Accordchild2 .sec1product {
+  width: 100%;
+  height: auto;
+  gap: 8px;
+  padding-inline: 5px !important;
+}
+main
+  section:nth-child(2)
+  .AllAcord
+  .Accordchild2
+  .sec1product
+  .subicon
+  .vericon
+  svg {
+  margin-top: 5px;
+  width: 24px;
+  height: 24px;
 }
 main section:nth-child(2) .AllAcord .Accordchild2 .sec1product .subicon {
   display: flex;
   align-items: center;
   gap: 5px;
-  
 }
-
-
+main section:nth-child(2) .AllAcord .Accordchild2 .sec1product .subText {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+ text-align: start;
+}
+main section:nth-child(2) .AllAcord .Accordchild2 .sec1product .subText span {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 13px;
+  padding-left: 25px;
+}
+main section:nth-child(2) .AllAcord .Accordchild2 .sec1product .subText p {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 13px;
+  color: #005bd3;
+  padding-left: 25px;
+}
+main section:nth-child(2) .AllAcord .Accordchild2 .sec1product .subText button {
+  width: 127px;
+  height: 28px;
+  margin-left: 25px;
+  padding: 6px, 12px, 6px, 12px;
+  border-radius: 6px;
+  border: 1.5px, 1.5px, 0px, 1.5px;
+  background-color: #333333;
+  box-shadow: 0px 0px 0px 1.5px #333333;
+  cursor: pointer;
+  color: var(---textwhite);
+  font-size: 12px;
+  font-weight: 600;
+  box-shadow: 0px 1px 0px 1.5px #333333;
+  box-shadow: 0px 2px 0px 0px #000000;
+  gap: 8px;
+}
