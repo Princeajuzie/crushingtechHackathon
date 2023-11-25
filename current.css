@@ -1,0 +1,760 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+  }
+  :root {
+    --color: #323232;
+    ---bgcolor: #1a1a1a;
+    --search: #303030;
+    --searchColor: #b5b5b5;
+    ---usersidecolor: #303030;
+    ---textwhite: #ffff;
+  }
+  
+  /* custom flex-container */
+  
+  .flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  body {
+    background: #f1f1f1;
+  }
+  nav {
+    height: 56px;
+    width: 100%;
+    background-color: var(---bgcolor);
+    padding: 12px 16px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+  
+  nav .logo {
+    height: 30px !important;
+    width: auto;
+  }
+  nav .search {
+    display: flex;
+    align-items: center;
+    background-color: var(--search);
+    height: 32px;
+    width: 480px;
+    padding: 8px;
+    gap: 6px;
+    border: 1px solid #616161;
+    border-radius: 5px;
+    color: var(--searchColor);
+    outline: none;
+    top: 14px;
+    left: 480px;
+  }
+  nav .search:hover {
+    border: 1px solid #e1e1e1;
+  }
+  nav .search:focus-within {
+    border: 2px solid #ffffff;
+  }
+  nav .search input[type="search"] {
+    background-color: var(--search);
+    border: none;
+    outline: none !important;
+    color: var(--searchColor);
+    width: 100%;
+  }
+  nav .search input[type="search"]::placeholder {
+    width: 44px;
+    height: 18px;
+    color: var(--searchColor);
+    font-family: inter;
+    font-size: 13px;
+    font-weight: 500;
+  }
+  nav .search .icon svg {
+    width: 15px;
+    height: 15px;
+  }
+  /* end of search bar styles */
+  
+  .userside {
+    width: 182px !important;
+    height: 32px;
+    top: 14px;
+    left: 1241.72px;
+    gap: 8px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .userside .notification {
+    width: 40px;
+    height: 32px;
+    padding: 6px;
+    border-radius: 8px;
+    gap: 8px;
+    border: none;
+    background: var(---usersidecolor);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  .userside .notification:hover {
+    background-color: #616161;
+  }
+  .userside .notification:focus {
+    border: 1px solid #005bd3 !important;
+    background-color: #656266;
+  }
+  
+  /* popover style */
+  
+  :popover-open {
+    width: 200px;
+    height: 100px;
+    position: absolute;
+    inset: unset;
+    bottom: 5px;
+    right: 5px;
+    margin: 0;
+  }
+  
+  /* [popover]:-internal-popover-in-top-layer::backdrop {
+  
+  height: 100vh;
+  } */
+  /* :notify-open {
+    position: absolute;
+    inset: unset;
+    bottom: 5px;
+    right: 0;
+    left: 8px;
+    margin: 0;
+  } */
+  
+  
+  .userside .notificationcontent {
+  
+    width: 383px;
+    height: 118px;
+    top: 65px;
+    cursor: default;
+    padding: auto;
+    right: 15px;
+    bottom: 20px;
+    border-radius: 14px;
+    margin-top: -3px;
+    border: 1px;
+    gap: 4px;
+    position: absolute;
+    background: var(---textwhite);
+    box-shadow: 0px 4px 8px 0px #0000000d;
+  }
+  .userside .notificationcontent .Alert {
+    padding: 8px;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  .userside .notificationcontent .Alert .Alertmesg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 351px;
+    height: 50px;
+    padding: 16px;
+    background: #f1f1f1;
+    border-radius: 8px;
+    gap: 8px;
+  }
+  .userside .notificationcontent .Alert .Alertmesg p {
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  
+  .userside .notificationcontent .Alert .alerticon {
+    display: flex;
+    align-items: center;
+    padding-inline: 10px;
+    justify-content: space-between;
+  }
+  .userside .notificationcontent .Alert .alerticon .notifyicon svg:focus {
+    border: 2px solid #005bd3 !important;
+    outline: none;
+     border-radius: 3px;
+    
+  }
+  .userside .notificationcontent .Alert span {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+    
+  }
+  
+  .userside .profile {
+    width: 130px;
+    height: 32px;
+    padding: 2px, 2px, 2px, 7px;
+    border: none;
+    border-radius: 8px;
+    gap: 8px;
+    background: var(---usersidecolor);
+    position: relative;
+    cursor: pointer;
+    justify-content: center;
+  }
+  .userside .profile:hover {
+    background-color: #616161;
+  }
+  .userside .profile:focus {
+    border: 2px solid #005bd3 !important;
+    background-color: #656266;
+  }
+  
+  .userside .profile p {
+    line-height: 15.6px;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(---textwhite);
+  }
+  .userside .profile .shortname {
+    width: 28px;
+    height: 28px;
+    padding: 9px, 5px, 9px, 5px;
+    border-radius: 6px;
+    background-color: #36fba1;
+    justify-content: center !important;
+    text-align: center;
+  }
+  .userside .profile .shortname span {
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .userside .profile #popover {
+    width: 320px;
+    height: 400px;
+    top: 50px;
+    right: 0px;
+    bottom: 20px;
+    border-radius: 14px;
+    margin-top: 10px;
+    cursor: default;
+    margin-right: 10px;
+    border: 1px;
+    gap: 4px;
+    position: absolute;
+    background: var(---textwhite);
+    box-shadow: 0px 4px 8px 0px #0000000d;
+  }
+  .userside .profile  #popover .dropdownsec1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block-start: 5px;
+    width: 100%;
+    gap: 8px;
+  }
+  .userside .profile #popover .dropdownsec1 .dropdownusername {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: space-between;
+    width: 308px;
+    height: 36px;
+    padding: 4px, 12px, 4px, 8px;
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: #f1f1f1;
+    padding-inline: 10px;
+  }
+  .userside
+    .profile
+    #popover
+    .dropdownsec1
+    .dropdownusername
+    .dropdownmainusername
+    .title {
+    width: 28px;
+    height: 28px;
+    padding: 9px, 5px, 9px, 5px;
+    border-radius: 6px;
+    background-color: #36fba1;
+    display: flex;
+    align-items: center;
+    color: var(---textwhite);
+    justify-content: center !important;
+    text-align: center;
+  }
+  .userside
+    .profile
+    #popover
+    .dropdownsec1
+    .dropdownusername
+    .dropdownmainusername
+    .title
+    p {
+    color: var(---bgcolor);
+  }
+  .userside
+    .profile
+    #popover
+    .dropdownsec1
+    .dropdownusername
+    .dropdownmainusername {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .userside
+    .profile
+    #popover
+    .dropdownsec1
+    .dropdownusername
+    .dropdownmainusername
+    span {
+    font-family: Inter;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .userside
+    .profile
+    #popover
+    .dropdownsec1
+    .dropdownusername
+    .dropdownicontick
+    svg {
+    width: 16px;
+    height: 16px;
+    padding: 4px, 2.67px, 4.67px, 2.67px;
+  }
+  
+  
+  /* end of dropdown sec1 */
+  
+  .userside .profile  #popover .dropdownsec2 {
+    width: 100%;
+    height: 175px;
+    padding: 0px, 6px, 0px, 6px;
+    gap: 4px;
+  
+  }
+  
+  .userside .profile  #popover.dropdownsec2 ul {
+    display: flex;
+    flex-direction: column;
+      
+    padding: 0px, 6px, 0px, 6px;
+    gap: 20px;
+    list-style: none;
+   
+  }
+  .userside .profile  #popover .dropdownsec2 ul li{
+    font-family: Inter;
+    font-size: 13px;
+    font-weight: 400;
+    margin-block: 5px;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+    width: 308px;
+    height: 30px;
+    padding: 6px;
+    margin-left: 5px;
+    cursor: pointer;
+    border-radius: 8px;
+    gap: 8px;
+  }
+   hr{
+    opacity: 0.5;
+  border: 0.5px solid #E1E1E1;
+  
+  }
+  .userside .profile  #popover .dropdownsec2 ul li:nth-child(1) {
+    display: flex;
+    align-items: center;
+    width: 308px;
+    height: 32px;
+    padding: 6px;
+    border-radius: 8px;
+  
+    gap: 8px;
+  
+    cursor: pointer;
+  }
+  .userside .profile  #popover .dropdownsec2 ul li:nth-child(1) svg {
+    width: 20px;
+    height: 20px;
+    margin-bottom: 2px;
+  }
+  .userside .profile  #popover .dropdownsec2 ul li:hover {
+    background-color: #f1f1f1;
+  }
+  .userside .profile  #popover .dropdownsec2 ul li:active {
+    border: 1px solid #f0f0f0;
+  }
+  .userside .profile  #popover .dropdownsec2 ul li:focus {
+    border: 2px solid #005bd3 !important;
+    background-color: #f1f1f1;
+  }
+  
+  .userside .profile  #popover .dropdownsec2 .names {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: 4px;
+    color: var( ---bgcolor);
+    margin-top: 10px;  
+    margin-left: 10px;
+  }
+  
+  .userside .profile  #popover .dropdownsec2 p {
+    color: var(---bgcolor);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  
+  .userside .profile  #popover .dropdownsec2 span {
+    font-family: Inter;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  
+  
+  .userside .profile  #popover .dropdownsec3 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 50px;
+    border-radius: 8px;
+    gap: 4px;
+    padding: 3px;
+  }
+  
+  
+  
+  
+  .userside .profile  #popover .dropdownsec3 ul {
+    gap: 4px;
+    list-style: none;
+  }
+  .userside .profile  #popover .dropdownsec3 ul li {
+    font-family: Inter;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+    width: 308px;
+    height: 30px;
+    padding: 6px;
+    margin-left: 5px;
+    cursor: pointer;
+    border-radius: 8px;
+    gap: 8px;
+  }
+  
+  .userside .profile  #popover .dropdownsec3 ul li:hover {
+    border-radius: 8px;
+    background-color: #f1f1f1;
+  }
+  .userside .profile  #popover .dropdownsec3 ul li:focus {
+    border: 2px solid #005bd3 !important;
+    background-color: #f1f1f1;
+  }
+  
+  /* end of user aside in navbar && end on navbar*/
+  
+  main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8px;
+    flex-direction: column;
+    gap: 8px;
+    padding-inline: 8px;
+  }
+  
+  main section:nth-child(1) {
+    width: 66%;
+    height: auto;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: var(---bgcolor);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    flex-wrap: wrap;
+  }
+  main section:nth-child(1) .plan {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+  }
+  main section:nth-child(1) span {
+    color: var(---textwhite);
+  }
+  main section:nth-child(1) button {
+    width: 99px;
+    height: 28px;
+    padding: 6px, 12px, 6px, 12px;
+    border-radius: 6px;
+    border: 1px;
+    gap: 8px;
+    background-color: var(---textwhite);
+  }
+  main section:nth-child(1) .plan svg {
+    width: 32px;
+    height: 32px;
+    padding: 4px;
+  
+    border-radius: 6px;
+    gap: 8px;
+  }
+  
+  /* end of plan section */
+  
+  main section:nth-child(2) {
+    width: 66%;
+    max-height: 128px;
+    padding: 8px;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px;
+    gap: 20px;
+    overflow: hidden;
+    background-color: var(---textwhite);
+    transition: 0.25s ease-in-out;
+    border: 1px solid #dbdbdb;
+    box-shadow: 0px 1px 0px 0px #0000000d;
+  
+  }
+  main section:nth-child(2) .Acoord {
+    width: 100%;
+    height: 90px;
+    padding: 8px;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    
+  }
+  main section:nth-child(2) .Acoord .reverse input[type="checkbox"] {
+    display: none;
+  }
+  main section:nth-child(2) .Acoord .reverse label svg {
+    cursor: pointer;
+    width: 28px;
+    height: Hug 28px;
+    padding: 4px;
+    border-radius: 6px;
+    gap: 8px;
+  }
+  main section:nth-child(2) .Acoord .dialogtrigger:checked + .drawericon  svg{
+    transform: rotate(-180deg);
+    transition: 0.25s ease-in-out;
+  }
+  main section:nth-child(2) .Acoord .guide {
+    
+    width: 100%;
+    height: 74px;
+    display: flex;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  main section:nth-child(2) .Acoord .guide h2 {
+    font-size: 14px !important;
+    font-weight: 600;
+  }
+  main section:nth-child(2) .Acoord .guide span {
+    font-size: 13px;
+    font-weight: 400;
+  }
+  main section:nth-child(2) .Acoord .guide p {
+    font-size: 12px;
+    font-weight: 400;
+  }
+  main section:nth-child(2) .Acoord .guide .progresscontent {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  main section:nth-child(2) .Acoord .guide .progresscontent p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  main section:nth-child(2) .Acoord .guide .progresscontent .progresscontainer {
+    width: 72px;
+    height: 4px;
+    padding: 0px, 54px, 0px, 0px;
+    border-radius: 28px;
+    background-color: #e3e3e3;
+  }
+  main
+    section:nth-child(2)
+    .Acoord
+    .guide
+    .progresscontent
+    .progresscontainer
+    .progress {
+    width: 0%;
+    height: 4px;
+    border-radius: 28px;
+    background-color: var(---bgcolor);
+    transition: width 0.3s ease;
+  }
+  
+  
+  main section:nth-child(2) .AllAcord {
+    width: 100%;
+    height: inherit;
+     position: relative;
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  main section:nth-child(2) .AllAcord .Accordchild1 {
+    width: 100%;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    gap: 10px;
+  }
+  main section:nth-child(2) .AllAcord .active {
+  /* display: none; */
+  }
+  
+  main section:nth-child(2) .AllAcord .Accordchild1 span{
+    font-weight: 500;
+    width: 100%;
+    text-align: left;
+    font-size: 13px;
+  }
+  main section:nth-child(2) .AllAcord .Accordchild1 .vericon svg {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+  }
+  /* end of .Accordchild1 */
+  
+  main section:nth-child(2) .AllAcord .Accordchild2 {
+    /* display: none; */
+    display: block;
+  width: 100%;
+  height: fit-content;
+  border-radius: 10px;
+  padding-block: 8px;
+  padding-inline: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent !important;
+  
+  }
+  
+  
+  main section:nth-child(2) .AllAcord  .activeaccord{
+  background-color: #f3f3f3;
+  }
+  
+  main section:nth-child(2) .AllAcord .Accordchild2 .spanindex  {
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+  }
+  main section:nth-child(2) .AllAcord .Accordchild2 .sec1product {
+    width: 100%;
+    height: auto;
+    gap: 8px;
+    padding-inline: 5px !important;
+  }
+  main
+    section:nth-child(2)
+    .AllAcord
+    .Accordchild2
+  
+    .vericon
+    svg {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+  }
+  main section:nth-child(2) .AllAcord .Accordchild2 .sec1product .subicon {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  
+  gap:10px;
+  }
+  main section:nth-child(2) .AllAcord .Accordchild2 .sec1product .subText {
+    display: flex;
+    flex-direction: column;
+    display: none;
+    gap:10px;
+  }
+  main section:nth-child(2) .AllAcord .Accordchild2 .sec1product .subText p {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 13px;
+  
+  }
+  main section:nth-child(2) .AllAcord .Accordchild2 .sec1product .subText a{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    gap: 5px;
+    font-size: 13px;
+    color: #005bd3;
+  
+  }
+  main section:nth-child(2) .AllAcord .Accordchild2 .sec1product .subText button {
+    width: 127px;
+    height: 28px;
+  
+    padding: 6px, 12px, 6px, 12px;
+    border-radius: 6px;
+    border: 1.5px, 1.5px, 0px, 1.5px;
+    background-color: #333333;
+    box-shadow: 0px 0px 0px 1.5px #333333;
+    cursor: pointer;
+    color: var(---textwhite);
+    font-size: 12px;
+    font-weight: 600;
+    box-shadow: 0px 1px 0px 1.5px #333333;
+    box-shadow: 0px 2px 0px 0px #000000;
+    gap: 8px;
+  }
+  
