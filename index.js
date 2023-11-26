@@ -21,8 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Apply the inline style to the progress bar
       progress.style.width = `${totalWidth}%`;
-
-      console.log(`Clicked item ${index}, Total Width: ${totalWidth}`);
     });
   });
 });
@@ -98,30 +96,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // });
 
-
-function HandleReset() {
-  const rotateicon1 = document.querySelector(".rotateicon1");
-  const rotateicon2 = document.querySelector(".rotateicon2");
-  document.getElementById("div1").classList.add("hidden");
-  document.getElementById("div2").classList.add("hidden");
-  document.getElementById("div3").classList.add("hidden");
-  document.getElementById("div4").classList.add("hidden");
-  document.getElementById("div5").classList.add("hidden");
-  document.getElementById("div6").classList.add("hidden");
-  rotateicon2.style.display = "none";
-  rotateicon1.style.display = "block";
-}
-
-document.addEventListener("DOMContentLoaded", function () {
-  const accordions = document.querySelectorAll(".Accordchild2");
-  const resetbtn = document.querySelector(".resetbtn");
-  accordions.forEach(function (accordion) {
-    resetbtn.addEventListener("click", function () {
-      HandleReset();
-    });
-  });
-});
-
 document.addEventListener("DOMContentLoaded", function () {
   const accordions = document.querySelectorAll(".Accordchild2");
 
@@ -134,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function () {
       rotateicon1.style.display = "none";
     });
 
-    accordion.addEventListener("mouseleave", () => {
+    rotateicon2.addEventListener("mouseleave", () => {
       rotateicon2.style.display = "none";
       rotateicon1.style.display = "block";
     });
@@ -190,67 +164,69 @@ document.addEventListener("DOMContentLoaded", function () {
 //   }, 0); // Adjust the delay as needed
 // }
 
-
-function startProgress() {
-  // Hide div1
-
- 
-}
-
 document.addEventListener("DOMContentLoaded", function () {
   const accordions = document.querySelectorAll(".rotateicon");
-
   accordions.forEach((accordion, index) => {
     const startprogress = accordion.querySelector(".startprogress");
-    startprogress.addEventListener("click", function () {
-      console.log("progress", accordion);
-      document.getElementById("div1").classList.add("hidden");
-      const rotateicon1 = accordion.querySelector(".rotateicon1");
-      const rotateicon2 = accordion.querySelector(".rotateicon2");
+
+    startprogress.addEventListener("click", function (abc) {
+      console.log(index, "index");
+      console.log(accordion.children);
+
+      accordion.children[7].style.display = "none";
+      accordion.children[6].style.display = "none";
+      // console.log("progress", accordion);
+      accordion.children[0].classList.add("hidden");
 
       // Automatically show div 2 after a delay
       setTimeout(() => {
-        document.getElementById("div2").classList.remove("hidden");
-        rotateicon2.style.display = "none";
-        rotateicon1.style.display = "none";
+        accordion.children[1].classList.remove("hidden");
+
+        accordion.children[7].style.display = "none";
+        accordion.children[6].style.display = "none";
         // Automatically hide div 2 after another delay
         setTimeout(() => {
-          document.getElementById("div2").classList.add("hidden");
-          rotateicon2.style.display = "none";
-          rotateicon1.style.display = "none";
+          accordion.children[1].classList.add("hidden");
+
+          accordion.children[7].style.display = "none";
+          accordion.children[6].style.display = "none";
           // Automatically show div 3 after another delay
           setTimeout(() => {
-            document.getElementById("div3").classList.remove("hidden");
-            rotateicon2.style.display = "none";
-            rotateicon1.style.display = "none";
+            accordion.children[2].classList.remove("hidden");
+
+            accordion.children[7].style.display = "none";
+            accordion.children[6].style.display = "none";
             setTimeout(() => {
-              document.getElementById("div3").classList.add("hidden");
-              rotateicon2.style.display = "none";
-              rotateicon1.style.display = "none";
+              accordion.children[2].classList.add("hidden");
+
+              accordion.children[7].style.display = "none";
+              accordion.children[6].style.display = "none";
               setTimeout(() => {
-                document.getElementById("div4").classList.remove("hidden");
-                rotateicon2.style.display = "none";
-                rotateicon1.style.display = "none";
+                accordion.children[3].classList.remove("hidden");
+
+                accordion.children[7].style.display = "none";
+                accordion.children[6].style.display = "none";
                 setTimeout(() => {
-                  document.getElementById("div4").classList.add("hidden");
-                  rotateicon2.style.display = "none";
-                  rotateicon1.style.display = "none";
+                  accordion.children[3].classList.add("hidden");
+
+                  accordion.children[7].style.display = "none";
+                  accordion.children[6].style.display = "none";
                   setTimeout(() => {
-                    document
-                      .getElementById("div5")
-                      .classList.remove("hidden");
-                    rotateicon2.style.display = "none";
-                    rotateicon1.style.display = "none";
+                    accordion.children[4].classList.remove("hidden");
+
+                    accordion.children[7].style.display = "none";
+                    accordion.children[6].style.display = "none";
                     setTimeout(() => {
-                      document.getElementById("div5").classList.add("hidden");
-                      rotateicon2.style.display = "none";
-                      rotateicon1.style.display = "none";
+                      accordion.children[4].classList.add("hidden");
+
+                      accordion.children[7].style.display = "none";
+                      accordion.children[6].style.display = "none";
                       setTimeout(() => {
-                        document
-                          .getElementById("div6")
-                          .classList.remove("hidden");
-                        rotateicon2.style.display = "none";
-                        rotateicon1.style.display = "none";
+                        document;
+                        accordion.children[5].classList.remove("hidden");
+
+                        accordion.children[7].style.display = "none";
+                        accordion.children[6].style.display = "none";
                       }, 0);
                     }, 80);
                   }, 0);
@@ -264,27 +240,31 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 function HandleReset() {
-  const rotateicon1 = document.querySelector(".rotateicon1");
-  const rotateicon2 = document.querySelector(".rotateicon2");
-  document.getElementById("div1").classList.add("hidden");
-  document.getElementById("div2").classList.add("hidden");
-  document.getElementById("div3").classList.add("hidden");
-  document.getElementById("div4").classList.add("hidden");
-  document.getElementById("div5").classList.add("hidden");
-  document.getElementById("div6").classList.add("hidden");
-  rotateicon2.style.display = "none";
-  rotateicon1.style.display = "block";
+  const accordions = document.querySelectorAll(".rotateicon");
+
+  accordions.forEach((accordion) => {
+    
+
+  })
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  const accordions = document.querySelectorAll(".Accordchild2");
+  const accordions = document.querySelectorAll(".rotateicon");
   accordions.forEach((accordion) => {
     const reset = accordion.querySelector(".reset");
     reset.addEventListener("click", function () {
-      HandleReset();
-    })
-  })
-})
+      accordion.children[0].classList.add("hidden");
+    accordion.children[1].classList.add("hidden");
+    accordion.children[2].classList.add("hidden");
+    accordion.children[3].classList.add("hidden");
+    accordion.children[4].classList.add("hidden");
+    accordion.children[5].classList.add("hidden");
+
+    accordion.children[7].style.display = "none";
+    accordion.children[6].style.display = "block";
+    });
+  });
+});
 
 let AllAcord = document.querySelector(".AllAcord");
 const Data = [

@@ -656,10 +656,9 @@ main section:nth-child(2) .AllAcord .Accordchild2 {
   /* display: none; */
   display: block;
   width: 100%;
-  height: fit-content;
+  height: 25px;
   border-radius: 10px;
-
-  padding-inline: 8px;
+  padding-block: 8px;
   display: flex;
   justify-content: space-between;
   /* background-color: transparent !important; */
@@ -671,7 +670,8 @@ main section:nth-child(2) .AllAcord .activeaccord {
   height: fit-content;
   border-radius: 10px;
   padding-block: 8px;
-  padding-inline: 8px;
+  padding-inline: 10px;
+  gap: 10px;
   display: flex;
   justify-content: space-between;
   background-color: #f3f3f3;
@@ -694,16 +694,23 @@ main section:nth-child(2) .AllAcord .Accordchild2 img {
 main section:nth-child(2) .AllAcord .activeaccord img {
   display: block;
 }
-main section:nth-child(2) .AllAcord .Accordchild2 .vericon svg {
+main section:nth-child(2) .AllAcord .Accordchild2 .vericon  {
   cursor: pointer;
-  width: 24px;
+  width: 27px;
   height: 24px;
+
 }
 main section:nth-child(2) .AllAcord .Accordchild2 .vericon .rotateicon2 {
   cursor: pointer;
   display: none;
-  width: 24px;
-  height: 24px;
+width: 24px;
+  height: fit-content;
+}
+main section:nth-child(2) .AllAcord .Accordchild2 .vericon  .rotateicon1 {
+  transform: rotate(180deg);
+  transition: 0.5s ease-in-out;
+
+  cursor: pointer;
 }
 main section:nth-child(2) .AllAcord .Accordchild2 .vericon .hidden {
   cursor: pointer;
