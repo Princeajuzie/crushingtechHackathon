@@ -770,3 +770,9 @@ main section:nth-child(2) .AllAcord .Accordchild2 .sec1product .subText button {
   box-shadow: 0px 2px 0px 0px #000000;
   gap: 8px;
 }
+
+@media only screen and (max-width: 768px) {
+  main section:nth-child(2) .AllAcord .activeaccord img {
+    display: none;
+  }
+}

@@ -173,11 +173,11 @@ document.addEventListener("DOMContentLoaded", function () {
       console.log(index, "index");
       console.log(accordion.children);
 
-      accordion.children[7].style.display = "none";
-      accordion.children[6].style.display = "none";
+      
       // console.log("progress", accordion);
       accordion.children[0].classList.add("hidden");
-
+      accordion.children[7].style.display = "none";
+      accordion.children[6].style.display = "none";
       // Automatically show div 2 after a delay
       setTimeout(() => {
         accordion.children[1].classList.remove("hidden");
@@ -228,13 +228,13 @@ document.addEventListener("DOMContentLoaded", function () {
                         accordion.children[7].style.display = "none";
                         accordion.children[6].style.display = "none";
                       }, 0);
-                    }, 80);
+                    }, 60);
                   }, 0);
-                }, 80);
+                }, 60);
               }, 0);
-            }, 80);
-          }, 80); // Adjust the delay as needed
-        }, 80); // Adjust the delay as needed
+            }, 60);
+          }, 60); // Adjust the delay as needed
+        }, 60); // Adjust the delay as needed
       }, 0); // Adjust the delay as needed
     });
   });
