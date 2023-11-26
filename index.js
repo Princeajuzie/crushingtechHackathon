@@ -513,7 +513,7 @@ const accordionHTML = Data.map(
         <div class="subText">
           <p class="paragraph">${item.paragraph}</p>
           <a href="${item.link}">Learn More</a>
-          <button>${item.button}</button>
+          <button tabindex="0">${item.button}</button>
         </div>
       </div>
     </div>

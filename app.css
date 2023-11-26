@@ -38,6 +38,9 @@ nav .logo {
   height: 30px !important;
   width: auto;
 }
+nav .logo .logo2 {
+  display: none;
+}
 nav .search {
   display: flex;
   align-items: center;
@@ -235,8 +238,13 @@ height: 100vh;
 }
 .userside .profile .shortname span {
   display: flex;
-  align-items: center;
+  font-family: Inter;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 15px;
+  letter-spacing: 0em;
   text-align: center;
+  color: var(---bgcolor);
 }
 
 .userside .profile #popover {
@@ -567,7 +575,7 @@ main section:nth-child(2) .Acoord .dialogtrigger:checked + .drawericon svg {
 }
 main section:nth-child(2) .Acoord .guide {
   width: 100%;
-  height: 74px;
+  height: 80px;
   display: flex;
   margin-top: 10px;
   display: flex;
@@ -694,19 +702,18 @@ main section:nth-child(2) .AllAcord .Accordchild2 img {
 main section:nth-child(2) .AllAcord .activeaccord img {
   display: block;
 }
-main section:nth-child(2) .AllAcord .Accordchild2 .vericon  {
+main section:nth-child(2) .AllAcord .Accordchild2 .vericon {
   cursor: pointer;
   width: 27px;
   height: 24px;
-
 }
 main section:nth-child(2) .AllAcord .Accordchild2 .vericon .rotateicon2 {
   cursor: pointer;
   display: none;
-width: 24px;
+  width: 24px;
   height: fit-content;
 }
-main section:nth-child(2) .AllAcord .Accordchild2 .vericon  .rotateicon1 {
+main section:nth-child(2) .AllAcord .Accordchild2 .vericon .rotateicon1 {
   transform: rotate(180deg);
   transition: 0.5s ease-in-out;
 
@@ -770,9 +777,207 @@ main section:nth-child(2) .AllAcord .Accordchild2 .sec1product .subText button {
   box-shadow: 0px 2px 0px 0px #000000;
   gap: 8px;
 }
+main
+  section:nth-child(2)
+  .AllAcord
+  .Accordchild2
+  .sec1product
+  .subText
+  button:focus {
+  width: 127px;
+  height: 28px;
+  border: 1px solid #005bd3 !important;
+  padding: 6px, 12px, 6px, 12px;
+  border-radius: 6px;
+  border: 1.5px, 1.5px, 0px, 1.5px;
+  background-color: #333333;
+  box-shadow: 0px 0px 0px 1.5px #333333;
+  cursor: pointer;
+  color: var(---textwhite);
+  font-size: 12px;
+  font-weight: 600;
+  box-shadow: 0px 1px 0px 1.5px #333333;
+  box-shadow: 0px 2px 0px 0px #000000;
+  gap: 8px;
+}
+main
+  section:nth-child(2)
+  .AllAcord
+  .Accordchild2
+  .sec1product
+  .subText
+  button:hover {
+  width: 127px;
+  height: 28px;
+  padding: 6px, 12px, 6px, 12px;
+  border-radius: 6px;
+  border: 1.5px, 1.5px, 0px, 1.5px;
+  background-color: #2a2a2a;
+  box-shadow: 0px 0px 0px 1.5px #333333;
+  cursor: pointer;
+  color: var(---textwhite);
+  font-size: 12px;
+  font-weight: 600;
 
-@media only screen and (max-width: 768px) {
+  box-shadow: 0px 0px 0px 1.5px #333333;
+
+  box-shadow: 0px 1px 0px 1.5px #333333;
+
+  box-shadow: 0px 2px 0px 0px #000000;
+
+  gap: 8px;
+}
+
+@media only screen and (max-width: 800px) {
   main section:nth-child(2) .AllAcord .activeaccord img {
     display: none;
   }
+
+  nav .logo svg:nth-child(1) {
+    display: none;
+  }
+  nav .logo .logo2 {
+    display: block !important;
+    height: 30px !important;
+  }
+
+  nav {
+    height: 56px;
+    width: 100%;
+    background-color: var(---bgcolor);
+    padding: 12px 5px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+
+  nav .search {
+    display: flex;
+    align-items: center;
+    background-color: var(--search);
+    height: 32px;
+    width: 100%;
+    margin-right: 10px;
+    padding: 8px;
+    gap: 6px;
+    border: 1px solid #616161;
+    border-radius: 5px;
+    color: var(--searchColor);
+    outline: none;
+  }
+  /* .userside .profile p {
+    display: none;
+  } */
+
+  .userside .profile {
+    width: fit-content;
+    height: 32px;
+    padding: 2px, 2px, 2px, 7px;
+    border: none;
+    border-radius: 8px;
+    gap: 8px;
+    background: var(---usersidecolor);
+    position: relative;
+    cursor: pointer;
+    justify-content: center;
+  }
+
+  .userside {
+    width: auto !important;
+    height: 32px;
+    top: 14px;
+    left: 1241.72px;
+    gap: 8px;
+    display: flex;
+    align-items: center;
+  }
+
+  .userside .notificationcontent {
+    width: 375px;
+    height: 118px;
+    top: 65px;
+    cursor: default;
+    padding: auto;
+    right: 10px;
+    bottom: 20px;
+    border-radius: 14px;
+    margin-top: -3px;
+    border: 1px;
+    gap: 4px;
+    position: absolute;
+    background: var(---textwhite);
+    box-shadow: 0px 4px 8px 0px #0000000d;
+  }
+
+  .userside .profile p {
+    display: none;
+  }
+  .userside .profile pre {
+    font-family: Inter;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 15px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: var(---bgcolor);
+  }
+
+  main section:nth-child(1) {
+    width: 100%;
+    height: auto;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: var(---bgcolor);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+  }
+
+  main section:nth-child(1) .plan {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  main section:nth-child(1) span {
+    color: var(---textwhite);
+    width: 100%;
+  }
+
+  main section:nth-child(2) {
+    width: 100%;
+    max-height: 120px;
+    padding: 8px;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px;
+    gap: 20px;
+    overflow: hidden;
+    background-color: var(---textwhite);
+    transition: 0.25s ease-in-out;
+    border: 1px solid #dbdbdb;
+    box-shadow: 0px 1px 0px 0px #0000000d;
+  }
+
+  main section:nth-child(2) .Acoord .guide {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+main section:nth-child(2) .Acoord .guide .progresscontent {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: -10px;
+}
 }
